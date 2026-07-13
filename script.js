@@ -149,3 +149,7 @@ link.download="Convocacao-Real.ics";
 link.click();
 
 });
+
+link.click();
+
+});
