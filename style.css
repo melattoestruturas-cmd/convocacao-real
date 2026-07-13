@@ -508,3 +508,11 @@ font-size:18px;
 }
 
 }
+.princesa{
+    display:block;
+    width:420px;
+    max-width:95%;
+    margin:25px auto -60px auto;
+    position:relative;
+    z-index:10;
+}
