@@ -1,142 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Convocação Real - Maria Helena</title>
 
-<link rel="stylesheet" href="style.css">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* COLE A PARTE 2 AQUI */
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ===============================
-TELA 1
-ENVELOPE
-================================ -->
+<canvas id="particles"></canvas>
+
+<!-- ============================= -->
+<!-- TELA INICIAL -->
+<!-- ============================= -->
 
 <section id="intro">
 
-<div id="particles"></div>
+<div class="backgroundGlow"></div>
 
 <div id="envelope">
 
-<div class="wax-seal">
+<div class="front">
+
+<h1>👑</h1>
+
+<h2>CONVOCAÇÃO REAL</h2>
+
+<p>Um convite acaba de chegar do Castelo Encantado.</p>
+
+<div id="seal">
+
+<div class="sealInner">
+
+M
+
+</div>
+
+</div>
+
+<span>👆 Toque no selo para abrir sua Convocação Real</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ============================= -->
+<!-- VÍDEO -->
+<!-- ============================= -->
+
+<section id="videoContainer">
+
+<div id="player"></div>
+
+</section>
+
+<!-- ============================= -->
+<!-- CONVITE -->
+<!-- ============================= -->
+
+<section id="convite">
+
+<div class="goldLight"></div>
+
+<div id="scroll">
+
+<div class="velvet left"></div>
+
+<div class="velvet right"></div>
+
+<div id="waxSeal">
+
+<div class="coroa">
+
 👑
-</div>
-
-<h1>Convocação Real</h1>
-
-<p>
-Uma mensagem acaba de chegar do Castelo Encantado
-</p>
-
-<button id="openEnvelope">
-
-Abrir Convocação
-
-</button>
 
 </div>
 
-</section>
+<div class="m">
 
-<!-- ===============================
-TELA 2
-VIDEO
-================================ -->
-
-<section id="videoScreen">
-
-<div class="video-container">
-
-<iframe
-id="youtubePlayer"
-width="100%"
-height="100%"
-src=""
-title="YouTube"
-frameborder="0"
-allow="autoplay; encrypted-media"
-allowfullscreen>
-</iframe>
+M
 
 </div>
 
-</section>
+</div>
 
-<!-- ===============================
-TELA 3
-PERGAMINHO
-================================ -->
+<div id="paper">
 
-<section id="castle">
+<div class="brasao">
 
-<div class="magic"></div>
+👑
 
-<div id="scrollClosed">
-<!-- PERGAMINHO ABERTO -->
+</div>
 
-<div id="scrollOpen">
+<h1>CONVOCAÇÃO REAL</h1>
 
-<div class="scrollContent">
-
-<img src="img/crest.png" class="crest">
-
-<h1>👑 CONVOCAÇÃO REAL 👑</h1>
-
-<p class="intro">
-Uma mensagem acaba de chegar do Castelo Encantado.
-</p>
+<h3>Uma mensagem acaba de chegar do Castelo Encantado.</h3>
 
 <p>
 
 A princesa
-<span class="princess">
-Maria Helena
-</span>
+
+</p>
+
+<h2>Maria Helena</h2>
+
+<p>
+
 comemora seu
-<b>1º ano de reinado</b>,
-e sua presença foi escolhida para fazer parte desta história.
+
+<strong>1º Ano de Reinado</strong>.
+
+</p>
+
+<p>
+
+Sua presença foi escolhida para fazer parte desta história.
 
 </p>
 
 <p>
 
 Juntamente com o Rei e a Rainha,
+
 convidam todos do Reino para celebrar
+
 uma grande festa repleta de magia,
+
 encanto e alegria.
 
 </p>
 
+<hr>
+
 <div class="info">
 
-<h2>📅 09 de agosto de 2026</h2>
+<h4>📅 Dia 09 de agosto de 2026</h4>
 
-<h3>📍 Espaço Karibi Festas</h3>
-
-<p>
-
-Av. dos Imigrantes, 1648<br>
-
-Jardim Aurora – Sorriso/MT<br>
-
-CEP 78892-145
-
-</p>
+<h4>🕒 16:00 horas</h4>
 
 </div>
 
-<p class="important">
+<div class="local">
+
+<h4>📍 Espaço Karibi Festas</h4>
+
+<p>Av. dos Imigrantes, 1648</p>
+
+<p>Jardim Aurora</p>
+
+<p>Sorriso - MT</p>
+
+<p>CEP 78892-145</p>
+
+</div>
+
+<p class="importante">
 
 ✨ Sua presença é muito importante.
 
@@ -145,27 +179,22 @@ CEP 78892-145
 <div class="buttons">
 
 <a
-id="confirmBtn"
-target="_blank">
+
+id="confirmar"
+
+target="_blank"
+
+href="https://wa.me/5500000000000?text=Recebi%20a%20Convoca%C3%A7%C3%A3o%20Real%20e%20tenho%20a%20honra%20de%20confirmar%20minha%20presen%C3%A7a%20na%20comemora%C3%A7%C3%A3o%20do%201%C2%BA%20Ano%20de%20Reinado%20da%20Princesa%20Maria%20Helena.%20%E2%9C%A8%F0%9F%91%91%0A%0A%F0%9F%93%9C%20Estarei%20presente%20no%20grande%20dia%20para%20celebrar%20este%20momento%20t%C3%A3o%20especial!">
 
 ✨ Confirmar Presença
 
 </a>
 
-<a
-id="calendarBtn">
+<button id="calendar">
 
 📅 Adicionar ao Calendário
 
-</a>
-
-<a
-href="https://maps.google.com/?q=Av.+dos+Imigrantes,+1648+Sorriso+MT"
-target="_blank">
-
-📍 Ver Local
-
-</a>
+</button>
 
 </div>
 
@@ -175,28 +204,13 @@ target="_blank">
 
 </section>
 
-<script src="script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+
+/* COLE A PARTE 3 AQUI */
+
+</script>
 
 </body>
 </html>
-<div class="redRibbon"></div>
-
-<div id="sealButton">
-
-<div class="seal">
-
-👑
-
-<span>M</span>
-
-</div>
-
-<p>
-
-Toque no selo para abrir sua Convocação Real
-
-</p>
-
-</div>
-
-</div>
