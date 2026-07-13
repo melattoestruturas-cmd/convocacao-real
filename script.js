@@ -2,7 +2,7 @@
 // CONFIGURAÇÕES
 // ===============================
 
-const YOUTUBE_VIDEO_ID = "COLE_AQUI_O_ID_DO_VIDEO";
+const YOUTUBE_VIDEO_ID = "https://youtube.com/shorts/Zlx4lTzeCyI?si=Pz2eLUBkHMWhqeJe";
 
 let player;
 
