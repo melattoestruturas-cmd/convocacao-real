@@ -208,7 +208,149 @@ href="https://wa.me/5500000000000?text=Recebi%20a%20Convoca%C3%A7%C3%A3o%20Real%
 
 <script>
 
-/* COLE A PARTE 3 AQUI */
+/* C // ===============================
+// PARTÍCULAS DOURADAS
+// ===============================
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+let w, h;
+let particles = [];
+
+function resizeCanvas() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+for (let i = 0; i < 120; i++) {
+    particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 2 + 1,
+        s: Math.random() * 0.8 + 0.2,
+        a: Math.random()
+    });
+}
+
+function drawParticles() {
+
+    ctx.clearRect(0, 0, w, h);
+
+    particles.forEach(p => {
+
+        p.y -= p.s;
+        p.a += 0.02;
+
+        if (p.y < -10) {
+            p.y = h + 10;
+            p.x = Math.random() * w;
+        }
+
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(255,215,120,${
+            0.3 + Math.sin(p.a) * 0.4
+        })`;
+
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(drawParticles);
+
+}
+
+drawParticles();
+
+
+// ===============================
+// BRILHO NO SELO
+// ===============================
+
+setInterval(() => {
+
+    if (!document.getElementById("seal")) return;
+
+    document.getElementById("seal").animate([
+        {
+            transform: "scale(1)"
+        },
+        {
+            transform: "scale(1.08)"
+        },
+        {
+            transform: "scale(1)"
+        }
+    ], {
+        duration: 1200
+    });
+
+}, 1800);
+
+
+// ===============================
+// BRILHO NO PERGAMINHO
+// ===============================
+
+function brilhoPergaminho() {
+
+    if (convite.style.display !== "flex") return;
+
+    const brilho = document.createElement("div");
+
+    brilho.style.position = "fixed";
+    brilho.style.left = Math.random() * innerWidth + "px";
+    brilho.style.top = Math.random() * innerHeight + "px";
+    brilho.style.width = "6px";
+    brilho.style.height = "6px";
+    brilho.style.borderRadius = "50%";
+    brilho.style.background = "gold";
+    brilho.style.boxShadow = "0 0 15px gold";
+    brilho.style.pointerEvents = "none";
+    brilho.style.zIndex = "999";
+
+    document.body.appendChild(brilho);
+
+    brilho.animate([
+        {
+            transform: "scale(0)",
+            opacity: 0
+        },
+        {
+            transform: "scale(1.8)",
+            opacity: 1
+        },
+        {
+            transform: "scale(0)",
+            opacity: 0
+        }
+    ], {
+        duration: 1800
+    });
+
+    setTimeout(() => brilho.remove(), 1800);
+
+}
+
+setInterval(brilhoPergaminho, 250);
+
+
+// ===============================
+// ROLAGEM SUAVE
+// ===============================
+
+document.documentElement.style.scrollBehavior = "smooth";
+
+
+// ===============================
+// MENSAGEM FINAL
+// ===============================
+
+console.log("Convocação Real carregada com sucesso.");
 
 </script>
 
